@@ -1,8 +1,8 @@
-export default function Home() {
+export default function EventsPage() {
   return (
     <div>
-      <h1>Campus Companion</h1>
-      <p>Welcome to your campus hub.</p>
+      <h1>Events</h1>
+      <p>Browse upcoming campus events.</p>
     </div>
   );
 }
