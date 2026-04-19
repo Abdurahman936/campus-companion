@@ -27,6 +27,23 @@ h1, h2, h3 {
   font-family: 'Fraunces', serif;
 }
 
+/* Accessibility: large text */
+.large-text body {
+  font-size: 1.15rem;
+}
+
+/* Accessibility: high contrast */
+.high-contrast {
+  --bg: #000;
+  --surface: #111;
+  --navy: #fff;
+  --text: #fff;
+  --muted: #ccc;
+  --border: #555;
+  --gold: #ffe066;
+  --gold-light: #333;
+}
+
 .nav-link:hover {
   background: rgba(255,255,255,0.1) !important;
   color: #fff !important;
