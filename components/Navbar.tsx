@@ -35,6 +35,7 @@ export default function Navbar() {
             { href: "/helpdesk", label: "Helpdesk" },
             { href: "/lost-and-found", label: "Lost & Found" },
             { href: "/accessibility", label: "Accessibility" },
+            { href: "/ml-recommender", label: "🧠 Recommender" },
           ].map(({ href, label }) => (
             <li key={href}>
               <Link href={href} className="nav-link" style={{
