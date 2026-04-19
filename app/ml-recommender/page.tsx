@@ -197,6 +197,53 @@ export default function MLRecommenderPage() {
         </div>
       )}
 
+      {/* How this recommendation works */}
+      <div style={{
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderRadius: "12px",
+        padding: "1.75rem",
+        marginBottom: "1.5rem",
+      }}>
+        <h2 style={{
+          fontSize: "1.2rem",
+          fontWeight: 700,
+          color: "var(--navy)",
+          marginBottom: "1.25rem",
+          letterSpacing: "-0.01em",
+        }}>
+          How this recommendation works
+        </h2>
+
+        {[
+          {
+            title: "Inputs / Features",
+            body: "Each event in the dataset is described using 5 binary features like academic, social, sports, indoor and evening. 1 means yes and 0 means no. The user also picks their preference using the same 5 features. Both the user and each event are represented as vector.",
+          },
+          {
+            title: "Model Used",
+            body: "The system uses cosine similarity, a technique from content-based filtering. This measures the angle between the user's preference vector and each event vector. The smaller the angle between them, the more similar they will be. This is inspired by the k nearest neighbours instead of rules.",
+          },
+          {
+            title: "Output",
+            body: "The system scores every event against the users' preferences and gives us back the top 3 highest scoring matches. This is displayed with a percentage score and a visual bar. If a 100% score is present this means that the event perfectly matches every preference the user selected.",
+          },
+          {
+            title: "Evaluation",
+            body: "The recommender was tested manually. Selecting academic and indoor correctly retured three academic indoor events which were guest lecture, cv workshop and study skills bootcamp which all scored 100%. Selecting social and evening preferences returned different events like we expected. Results were logical and consistent.",
+          },
+        ].map(({ title, body }) => (
+          <div key={title} style={{ marginBottom: "1.1rem" }}>
+            <p style={{ margin: "0 0 0.3rem", fontWeight: 600, color: "var(--navy)", fontSize: "0.925rem" }}>
+              {title}
+            </p>
+            <p style={{ margin: 0, color: "var(--muted)", fontSize: "0.875rem", lineHeight: 1.7 }}>
+              {body}
+            </p>
+          </div>
+        ))}
+      </div>
+
       {/* How it works */}
       <div style={{
         background: "var(--gold-light)",
